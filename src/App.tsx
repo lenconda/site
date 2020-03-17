@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     http
-      .get('/6cf88eff3c829f6dbe6f779e2170c196e033c9ad/metadata.json')
+      .get('/metadata.json')
       .then(res => res.data && setMetadata(res.data));
   }, []);
 
@@ -30,7 +30,7 @@ const App: React.FC = () => {
       </nav>
       <Router history={history}>
         <Switch>
-          <Route path="/" component={HomePage} />
+          <Route path="/" component={HomePage} exact />
           <Route path="/artworks" component={ArtworksPage} />
           <Route path="/projects" component={ProjectsPage} />
         </Switch>
