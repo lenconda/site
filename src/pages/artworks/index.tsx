@@ -19,7 +19,7 @@ const ArtworksPage: React.FC = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} animated slideInUp`}>
       {
         artworks && artworks.map((value, index) => {
           return (
