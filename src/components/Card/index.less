@@ -1,20 +1,20 @@
 @import '../../global.less';
 
 .card {
-  box-shadow: @box-shadow;
-  border-radius: @border-radius;
   transition: all @transition-duration;
   display: inline-block;
   padding: 20px;
-  width: 240px;
-  cursor: pointer;
+  width: 360px;
+  max-height: 77px;
+  overflow: hidden;
 
   @media screen and (max-width: 320px) {
     width: 100%;
   }
 
   &:hover {
-    box-shadow: @box-shadow-hover;
+    max-height: 178px;
+    box-shadow: inset 0 0 0 3px #333;
     transition: all @transition-duration;
   }
 
@@ -31,8 +31,30 @@
     font-size: 12px;
     font-weight: 200;
     width: 100%;
-    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin-bottom: 28px;
+  }
+
+  & > .link {
+    font-size: 12px;
+    color: inherit;
+    text-decoration: none;
+    transition: all @transition-duration;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::after {
+      content: '\2192';
+      margin-left: 8px;
+      transition: all @transition-duration;
+    }
+
+    &:hover::after {
+      margin-left: 16px;
+      transition: all @transition-duration;
+    }
   }
 }
