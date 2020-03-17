@@ -2,18 +2,18 @@
 
 .card {
   transition: all @transition-duration;
-  display: inline-block;
   padding: 20px;
   width: 360px;
-  max-height: 77px;
+  height: 77px;
   overflow: hidden;
+  margin: 0 auto;
 
   @media screen and (max-width: 320px) {
     width: 100%;
   }
 
   &:hover {
-    max-height: 178px;
+    height: 160px;
     box-shadow: inset 0 0 0 3px #333;
     transition: all @transition-duration;
   }
@@ -33,6 +33,7 @@
     width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
     margin-bottom: 28px;
   }
 

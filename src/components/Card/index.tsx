@@ -15,7 +15,10 @@ const Card: React.FC<CardProps> = ({
   className = '', ...props
 }: CardProps) => {
   return (
-    <div className={`${styles.card} ${className}`} style={{ backgroundColor, color, ...props.style }}>
+    <div
+      className={`${styles.card} ${className}`}
+      style={{ backgroundColor, color, ...props.style }}
+    >
       <h1>{props.title}</h1>
       <h2>{props.subTitle}</h2>
       <a href={props.href} className={styles.link}>继续了解</a>

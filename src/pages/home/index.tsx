@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
             return (
               <div
                 key={index}
-                className="animated bounceIn"
+                className="animated flipInX"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <a href={value.href}>
