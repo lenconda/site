@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import http from '../../utils/http';
 import styles from './index.less';
+import Loading from '../../components/Loading';
 
 export interface INavigationItem {
   name: string;
@@ -9,16 +10,20 @@ export interface INavigationItem {
 
 const HomePage: React.FC = () => {
   const [navigation, setNavigation] = useState<INavigationItem[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    setLoading(true);
     http
       .get('/navigations.json')
-      .then(res => res.data && setNavigation(res.data));
+      .then(res => res.data && setNavigation(res.data))
+      .finally(() => setLoading(false));
   }, []);
 
   return (
-    <>
-      <div className={styles.navigation}>
+    loading
+      ? <Loading />
+      : <div className={styles.navigation}>
         {
           navigation && navigation.map((value, index) => {
             return (
@@ -35,7 +40,6 @@ const HomePage: React.FC = () => {
           })
         }
       </div>
-    </>
   );
 };
 
