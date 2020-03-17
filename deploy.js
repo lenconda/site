@@ -9,11 +9,11 @@ deploy({
   },
   bucket: {
     pro: {
-      name: 'linkstats-static',
+      name: 'lenconda-site',
       refreshPath: '',
     },
     test: {
-      name: 'linkstats-static',
+      name: 'lenconda-site',
       projectPath: '',
     },
   },
