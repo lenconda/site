@@ -19,7 +19,7 @@ const ProjectsPage: React.FC = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} animated slideInUp`}>
       {
         projects && projects.map((value, index) => {
           return (
