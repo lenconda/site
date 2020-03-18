@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './index.less';
 
-export interface CardProps extends React.HtmlHTMLAttributes<HTMLElement> {
+export interface CardComponentProps extends React.HtmlHTMLAttributes<HTMLElement> {
   color?: string;
   backgroundColor?: string;
   title: string;
@@ -9,11 +9,11 @@ export interface CardProps extends React.HtmlHTMLAttributes<HTMLElement> {
   href: string;
 }
 
-const Card: React.FC<CardProps> = ({
+const Card: React.FC<CardComponentProps> = ({
   color = '#333',
   backgroundColor = 'white',
   className = '', ...props
-}: CardProps) => {
+}: CardComponentProps) => {
   return (
     <div
       className={`${styles.card} ${className}`}

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import styles from './index.less';
 import Card from '../../components/Card';
 import http from '../../utils/http';
 import Loading from '../../components/Loading';
+import Container from '../../components/Container';
+import { yellow } from '../../constants';
 
 export interface IProjectItem {
   name: string;
@@ -25,7 +26,7 @@ const ProjectsPage: React.FC = () => {
   return (
     loading
       ? <Loading />
-      : <div className={`${styles.container} animated slideInUp`}>
+      : <Container backgroundColor={yellow}>
         {
           projects && projects.map((value, index) => {
             return (
@@ -42,7 +43,7 @@ const ProjectsPage: React.FC = () => {
             );
           })
         }
-      </div>
+      </Container>
   );
 };
 
