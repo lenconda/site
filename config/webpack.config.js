@@ -24,11 +24,6 @@ module.exports = {
     path.resolve(__dirname, '../src/index.tsx')
   ],
 
-  externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM',
-  },
-
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'static/js/' + (env.isDev ? '[name].bundle.js' : '[name].[hash].bundle.js'),
