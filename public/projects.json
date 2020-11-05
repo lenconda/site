@@ -1,0 +1,42 @@
+[
+  {
+    "name": "faun",
+    "description": "📦 快速、通用、轻量级的微前端解决方案",
+    "href": "https://faun.lenconda.top"
+  },
+  {
+    "name": "LinkStats",
+    "description": "开放的链接数据分析平台",
+    "href": "https://linkstats.lenconda.top"
+  },
+  {
+    "name": "@lenconda/generator-react-app",
+    "description": "基于 Yeoman 的轻量级 React 脚手架",
+    "href": "https://www.npmjs.com/package/@lenconda/generator-react-app"
+  },
+  {
+    "name": "@lenconda/generator-react-ssr",
+    "description": "基于 Yeoman 的轻量级 React 服务端渲染脚手架",
+    "href": "https://www.npmjs.com/package/@lenconda/generator-react-app"
+  },
+  {
+    "name": "free-proxy",
+    "description": "获取免费的 HTTP 代理",
+    "href": "https://www.npmjs.com/package/free-proxy"
+  },
+  {
+    "name": "openhooks",
+    "description": "在服务器上部署一套 Webhook 终端",
+    "href": "https://www.npmjs.com/package/free-proxy"
+  },
+  {
+    "name": "overridable",
+    "description": "使 JavaScript 的函数和方法支持重载",
+    "href": "https://www.npmjs.com/package/overridable"
+  },
+  {
+    "name": "neon",
+    "description": "JavaScript 广度优先的全站爬虫",
+    "href": "https://github.com/lenconda/neon"
+  }
+]

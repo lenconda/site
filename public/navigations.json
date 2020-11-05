@@ -1,0 +1,26 @@
+[
+  {
+    "name": "技术博客",
+    "href": "https://blog.lenconda.top"
+  },
+  {
+    "name": "个人简历",
+    "href": "https://resume.lenconda.top"
+  },
+  {
+    "name": "开源项目",
+    "href": "#/projects"
+  },
+  {
+    "name": "艺术创作",
+    "href": "#/artworks"
+  },
+  {
+    "name": "关于我",
+    "href": "https://blog.lenconda.top/about"
+  },
+  {
+    "name": "GitHub",
+    "href": "https://github.com/lenconda"
+  }
+]

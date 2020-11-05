@@ -21,7 +21,7 @@ module.exports = {
   mode: (env.isDev ? 'development' : 'production'),
 
   entry: [
-    path.resolve(__dirname, '../src/index.tsx')
+    path.resolve(__dirname, '../src/index.tsx'),
   ],
 
   output: {
@@ -38,13 +38,13 @@ module.exports = {
           name: 'vendors',
           test: /[\\/]node_modules[\\/]/,
           priority: -10,
-          chunks: 'initial'
+          chunks: 'initial',
         },
         common: {
           name: 'common',
           chunks: 'all',
           minSize: 20,
-          minChunks: 2
+          minChunks: 2,
         },
         '@ant-design': {
           name: 'ant-design',
@@ -52,7 +52,7 @@ module.exports = {
           priority: 30,
           chunks: 'initial',
         },
-      }
+      },
     },
 
     minimizer: [
@@ -62,13 +62,13 @@ module.exports = {
         sourceMap: true, // Must be set to true if using source-maps in production
         terserOptions: {
           // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
-        }
+        },
       }),
-    ]
+    ],
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', 'jsx']
+    extensions: ['.ts', '.tsx', '.js', 'jsx'],
   },
 
   devtool: false,
@@ -87,7 +87,7 @@ module.exports = {
     //     }
     //   }
     // },
-    contentBase: path.resolve(__dirname, '../public')
+    contentBase: path.resolve(__dirname, '../public'),
   },
 
   module: {
@@ -110,14 +110,14 @@ module.exports = {
               cacheDirectory: true,
               cacheCompression: true,
               compact: true,
-            }
+            },
           },
-        ]
+        ],
       },
       {
         test: /\.(html)$/,
         exclude: /node_modules/,
-        use: 'html-loader'
+        use: 'html-loader',
       },
       {
         test: /\.(le|c)ss$/,
@@ -163,17 +163,22 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: env.isDev ? 'static/css/[name].css' : 'static/css/[name].[contenthash].css',
-      chunkFilename: env.isDev ? 'static/css/[id].css' : 'static/css/[id].[contenthash].css'
+      chunkFilename: env.isDev ? 'static/css/[id].css' : 'static/css/[id].[contenthash].css',
     }),
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../assets/'),
-        to: path.resolve(__dirname, '../dist/assets')
-      }
+        to: path.resolve(__dirname, '../dist/assets'),
+      },
+      {
+        from: path.resolve(__dirname, '../public/**/*.json'),
+        to: path.resolve(__dirname, '../dist'),
+        flatten: true,
+      },
     ]),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     ...developmentPlugins,
-  ]
+  ],
 };

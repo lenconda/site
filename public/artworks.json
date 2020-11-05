@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Dark+++",
+    "description": "比 Dark+ 更美观的 VS Code 主题",
+    "href": "https://marketplace.visualstudio.com/items?itemName=lenconda.theme-darkplusplusplus"
+  },
+  {
+    "name": "One Resharpened",
+    "description": "更舒适的 One Dark 配色方案",
+    "href": "https://marketplace.visualstudio.com/items?itemName=lenconda.theme-one-resharpened"
+  },
+  {
+    "name": "Casper Pro",
+    "description": "基于 Casper 的简洁 Ghost 主题",
+    "href": "https://github.com/lenconda/casper-pro"
+  },
+  {
+    "name": "Atticonda",
+    "description": "基于 Attila 优化的 Ghost 主题",
+    "href": "https://github.com/lenconda/atticonda"
+  }
+]
