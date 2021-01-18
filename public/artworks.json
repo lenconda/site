@@ -18,5 +18,10 @@
     "name": "Atticonda",
     "description": "基于 Attila 优化的 Ghost 主题",
     "href": "https://github.com/lenconda/atticonda"
+  },
+  {
+    "name": "Cayenne",
+    "description": "基于 Bootstrap 的商务风格主题",
+    "href": "https://github.com/lenconda/cayenne"
   }
 ]
