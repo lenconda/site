@@ -1,4 +1,19 @@
-[
+[ 
+  {
+    "name": "Pugio.js (Current Working On)",
+    "description": "安全可靠的服务器 WebHook 指令运行环境",
+    "href": "https://github.com/pugiojs"
+  },
+  {
+    "name": "@lenconda/nestjs-redis",
+    "description": "基于 `redis` Nest.js 模块，没有任何 `ioredis` 依赖",
+    "href": "https://github.com/lenconda/neon"
+  },
+  {
+    "name": "Dollie.js",
+    "description": "一套工具生成任意你想要的工程项目",
+    "href": "https://dollie.lenconda.top"
+  },
   {
     "name": "faun",
     "description": "📦 快速、通用、轻量级的微前端解决方案",
